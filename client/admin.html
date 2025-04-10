@@ -13,7 +13,16 @@
       <h2>Upload New Game</h2>
       <input type="text" id="game-name" placeholder="Game Name" required>
       <label>Game Image</label>
-      <input type="file" id="game-image" accept="image/*" required>
+<input type="file" id="game-image" accept="image/*" required onchange="validateFileSize(this)">
+<script>
+    function validateFileSize(input) {
+        const file = input.files[0];
+        if (file.size > 5000000) { // 5MB limit
+            alert('File size exceeds 5MB!');
+            input.value = ''; // Clear the input
+        }
+    }
+</script>
       <label>HTML File</label>
       <input type="file" id="game-html" accept=".html" required>
       <label>CSS File (optional)</label>

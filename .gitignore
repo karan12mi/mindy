@@ -1,0 +1,8 @@
+# Server
+server/.env
+server/uploads/
+server/node_modules/
+
+# System
+.DS_Store
+Thumbs.db

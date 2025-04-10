@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(image/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transform: rotate(0deg);
+    transform-origin: center center;
+}
+
+
+header {
+    background-color: #0000008f;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 5px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    padding: 10px 10%;
+   
+    position: relative;
+}
+
+.home_menu, .signin-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%;
+    height: 40px;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 55%;
+}
+
+.search_bar input {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.search_bar button {
+    width: 10%;
+    height: 40px;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropdown-toggle {
+    display: none;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000000cb;
+    border-radius: 15px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: flex;
+}
+
+.dropdown-search {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.dropdown-search input {
+    border-radius: 10px;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 20px;
+}
+
+.game-card {
+    background-color: #0000008f;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-card img {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.game-card p {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.play-btn, .info-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease , font-size 0.3s ease;
+}
+
+.play-btn:hover, .info-btn:hover {
+    background-color: #e64a19;
+    font-size: 25px;
+}
+
+.info-div {
+    background-color: #0000008f;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        padding-left-ri: 20px;
+    }
+
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search_bar,
+    .signin-btn {
+        display: none;
+    }
+
+    .dropdown,
+    .dropdown-toggle {
+        display: block;
+        width: 10%;
+    }
+
+    .home_menu {
+        width: 25%;
+        height: auto;
+        padding: 10px;
+    }
+}

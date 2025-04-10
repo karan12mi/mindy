@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindy</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mindy</h1>
+        <div class="header-content">
+            <button class="home_menu">HOME</button>
+            <button class="home_menu">MENU</button>
+            <button class="home_menu">INFO</button>
+        
+            <div class="search_bar">
+                <input type="search" placeholder="Search">
+                <button class="home_menu">Search</button>
+            </div>
+        
+            <button class="signin-btn" onclick="window.open('login.html', '_blank')">Log In</button>
+        
+            <div class="dropdown">
+                <button class="home_menu dropdown-toggle">⋮</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-search">
+                        <input type="search" class="search-input" placeholder="Search">
+                        <button class="home_menu">Search</button>
+                    </div>
+                    <button class="signin-btn" onclick="window.open('login.html', '_blank')">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="games-section">
+        <div class="games-container js-game-container">
+           <!-- Game cards will be generated here -->
+        </div>
+    </section>
+
+    <footer>
+        <!-- Developer details here -->
+    </footer>
+
+    <script src="script/game-card-generator.js"></script>
+    <script src="script/game-play-info.js"></script>
+</body>
+</html>

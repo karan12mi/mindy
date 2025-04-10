@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Mindy</title>
+  <link rel="stylesheet" href="style/admin.css">
+</head>
+<body>
+  <div class="admin-dashboard">
+    <h1>Administrator Area</h1>
+    <div class="upload-form">
+      <h2>Upload New Game</h2>
+      <input type="text" id="game-name" placeholder="Game Name" required>
+      <label>Game Image</label>
+      <input type="file" id="game-image" accept="image/*" required>
+      <label>HTML File</label>
+      <input type="file" id="game-html" accept=".html" required>
+      <label>CSS File (optional)</label>
+      <input type="file" id="game-css" accept=".css">
+      <label>JavaScript File (optional)</label>
+      <input type="file" id="game-js" accept=".js">
+      <button id="upload-btn">Upload Game</button>
+      <p id="upload-status"></p>
+    </div>
+    <button id="logout-btn">Logout</button>
+  </div>
+  <script src="script/admin-auth.js"></script>
+</body>
+</html>

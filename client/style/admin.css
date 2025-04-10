@@ -1,0 +1,127 @@
+/* ===== ADMIN DASHBOARD LAYOUT ===== */
+.admin-dashboard {
+    display: none; /* Hidden until login */
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+    color: white;
+  }
+  
+  .admin-dashboard h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: darkorange;
+    font-size: 2.2em;
+  }
+  
+  /* ===== UPLOAD FORM STYLES ===== */
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .upload-form label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .upload-form input[type="text"],
+  .upload-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .upload-form input[type="file"] {
+    padding: 10px;
+  }
+  
+  .upload-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background-color: #45a049;
+  }
+  
+  #upload-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* ===== LOGIN FORM STYLES ===== */
+  .login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .login-container h1 {
+    color: darkorange;
+    margin-bottom: 20px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .login-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  #error-msg {
+    color: #ff4444;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 768px) {
+    .admin-dashboard, .login-container {
+      width: 90%;
+      padding: 20px;
+    }
+  }

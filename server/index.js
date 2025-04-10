@@ -97,3 +97,27 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
     console.log(`Uploads directory: ${path.join(__dirname, 'uploads')}`);
 });
+
+
+
+
+
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+const validator = require('validator');
+
+app.use(helmet());
+app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })); // 100 requests per 15 minutes
+
+app.post('/api/upload', upload.fields([
+    { name: 'image', maxCount: 1 },
+    { name: 'html', maxCount: 1 },
+    { name: 'css', maxCount: 1 },
+    { name: 'js', maxCount: 1 }
+]), (req, res) => {
+    const gameName = validator.escape(req.body.gameName); // Sanitize input
+    res.json({
+        message: `Game "${gameName}" uploaded successfully!`,
+        gameName: gameName
+    });
+});

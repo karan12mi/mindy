@@ -15,5 +15,13 @@
     <p id="error-msg"></p>
   </div>
   <script src="script/admin-auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bcryptjs/dist/bcrypt.min.js"></script>
+<script>
+    document.getElementById('login-btn').addEventListener('click', async () => {
+        const password = document.getElementById('password').value;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        // Send hashedPassword to server
+    });
+</script>
 </body>
 </html>
